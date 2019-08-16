@@ -1,7 +1,9 @@
 package com.yx.cuteloadingview;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Message;
 import android.support.v7.app.AlertDialog;
 
@@ -28,6 +30,7 @@ public class Utils {
         dialog.setCancelable(false);
         dialog.show();
         dialog.getWindow().setContentView(v);//自定义布局应该在这里添加，要在dialog.show()的后面
+        dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         dialog.getWindow().setLayout(dip2px(context,140), dip2px(context,140));
         loadview.startAllAnimation();
     }

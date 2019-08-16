@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void start(View view) {
-        handler.sendEmptyMessageDelayed(1,10000);
          Utils.showDialog(this);
+        handler.sendEmptyMessageDelayed(1,10000);
     }
 }
